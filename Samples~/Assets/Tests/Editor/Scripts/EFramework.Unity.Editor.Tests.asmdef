@@ -1,0 +1,13 @@
+{
+    "name": "EFramework.Unity.Editor.Tests",
+    "references": [
+        "EFramework.Unity.Utility",
+        "EFramework.Unity.Editor"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ]
+}

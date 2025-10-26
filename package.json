@@ -1,0 +1,50 @@
+{
+  "name": "io.eframework.unity.editor",
+  "displayName": "Unity.Editor",
+  "description": "Unity.Editor 是一个基于 Unity 的编辑器扩展工具库，提供了任务系统、配置管理、事件系统、快速构建等功能，用于提高开发效率。",
+  "version": "1.0.0",
+  "unity": "2021.3",
+  "license": "MIT",
+  "author": {
+    "name": "EFramework Innovation",
+    "email": "eframework-io@outlook.com",
+    "url": "https://github.com/eframework-io"
+  },
+  "homepage": "https://eframework.io",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eframework-io/Unity.Editor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eframework-io/Unity.Editor/issues"
+  },
+  "keywords": [
+    "eframework",
+    "unity",
+    "editor"
+  ],
+  "files": [
+    ".puer",
+    "Editor",
+    "Editor.meta",
+    "Plugins",
+    "Plugins.meta",
+    "Runtime",
+    "Runtime.meta",
+    "Documentation~",
+    "Samples~",
+    "CHANGELOG.md",
+    "CHANGELOG.md.meta",
+    "LICENSE.md",
+    "LICENSE.md.meta",
+    "package.json",
+    "package.json.meta",
+    "README.md",
+    "README.md.meta",
+    "Third Party Notices.md",
+    "Third Party Notices.md.meta"
+  ],
+  "dependencies": {
+    "io.eframework.unity.utility": "1.0.0"
+  }
+}

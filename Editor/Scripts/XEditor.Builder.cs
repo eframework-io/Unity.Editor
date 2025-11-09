@@ -433,8 +433,8 @@ namespace EFramework.Unity.Editor
 
 #if UNITY_ANDROID
 #if UNITY_6000_0_OR_NEWER
-                UnityEditor.Android.UserBuildSettings.DebugSymbols.level = Unity.Android.Types.DebugSymbolLevel.Full;
-                UnityEditor.Android.UserBuildSettings.DebugSymbols.format = Unity.Android.Types.DebugSymbolFormat.Zip;
+                UnityEditor.Android.UserBuildSettings.DebugSymbols.level = global::Unity.Android.Types.DebugSymbolLevel.Full;
+                UnityEditor.Android.UserBuildSettings.DebugSymbols.format = global::Unity.Android.Types.DebugSymbolFormat.Zip;
 #else
                 EditorUserBuildSettings.androidCreateSymbols = AndroidCreateSymbols.Debugging;
 #endif

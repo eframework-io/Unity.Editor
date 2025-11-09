@@ -5,7 +5,7 @@
 [![DeepWiki](https://img.shields.io/badge/DeepWiki-Explore-blue)](https://deepwiki.com/eframework-io/Unity.Editor)
 [![Discord](https://img.shields.io/discord/1422114598835851286?label=Discord&logo=discord)](https://discord.gg/XMPx2wXSz3)
 
-XEditor.Utility 提供了一系列编辑器实用工具函数，包括资源收集、依赖分析、文件操作等功能。
+提供了一系列编辑器实用工具函数，包括资源收集、依赖分析、文件操作等功能。
 
 ## 功能特性
 

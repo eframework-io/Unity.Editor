@@ -5,7 +5,7 @@
 [![DeepWiki](https://img.shields.io/badge/DeepWiki-Explore-blue)](https://deepwiki.com/eframework-io/Unity.Editor)
 [![Discord](https://img.shields.io/discord/1422114598835851286?label=Discord&logo=discord)](https://discord.gg/XMPx2wXSz3)
 
-XEditor.Npm 提供了在 Unity 编辑器中调用和执行 NPM 脚本的工具，支持异步执行、参数传递和错误处理。
+提供了在 Unity 编辑器中调用和执行 NPM 脚本的工具，支持异步执行、参数传递和错误处理。
 
 ## 功能特性
 

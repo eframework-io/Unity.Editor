@@ -5,7 +5,7 @@
 [![DeepWiki](https://img.shields.io/badge/DeepWiki-Explore-blue)](https://deepwiki.com/eframework-io/Unity.Editor)
 [![Discord](https://img.shields.io/discord/1422114598835851286?label=Discord&logo=discord)](https://discord.gg/XMPx2wXSz3)
 
-XEditor.Title 拓展了编辑器标题的功能，支持在标题中显示首选项信息和 Git 版本控制信息，方便开发者快速识别当前工作环境和项目状态。
+拓展了编辑器标题的功能，支持在标题中显示首选项信息和 Git 版本控制信息，方便开发者快速识别当前工作环境和项目状态。
 
 ## 功能特性
 

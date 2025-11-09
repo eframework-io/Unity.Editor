@@ -5,7 +5,7 @@
 [![DeepWiki](https://img.shields.io/badge/DeepWiki-Explore-blue)](https://deepwiki.com/eframework-io/Unity.Editor)
 [![Discord](https://img.shields.io/discord/1422114598835851286?label=Discord&logo=discord)](https://discord.gg/XMPx2wXSz3)
 
-XEditor.Command 是一个用于在编辑器中执行命令行操作的工具模块，提供了命令查找和执行功能，支持跨平台操作。
+提供了命令查找和执行功能，支持跨平台操作，用于简化在 Unity 编辑器环境的命令行操作。
 
 ## 功能特性
 

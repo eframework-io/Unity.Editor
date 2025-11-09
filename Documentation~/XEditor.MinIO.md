@@ -5,7 +5,7 @@
 [![DeepWiki](https://img.shields.io/badge/DeepWiki-Explore-blue)](https://deepwiki.com/eframework-io/Unity.Editor)
 [![Discord](https://img.shields.io/discord/1422114598835851286?label=Discord&logo=discord)](https://discord.gg/XMPx2wXSz3)
 
-XEditor.MinIO 提供了基于 MinIO 客户端的存储服务集成，支持资源上传和下载，简化了云存储操作流程，适用于资源分发和远端部署场景。
+提供了基于 MinIO 客户端的存储服务集成，支持资源上传和下载，简化了云存储操作流程，适用于资源分发和远端部署场景。
 
 ## 功能特性
 

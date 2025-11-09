@@ -5,7 +5,7 @@
 [![DeepWiki](https://img.shields.io/badge/DeepWiki-Explore-blue)](https://deepwiki.com/eframework-io/Unity.Editor)
 [![Discord](https://img.shields.io/discord/1422114598835851286?label=Discord&logo=discord)](https://discord.gg/XMPx2wXSz3)
 
-XEditor.Icons 提供了 Unity 编辑器内置图标的预览和导出工具，支持图标搜索和批量导出，方便UI开发和编辑器扩展。
+提供了 Unity 编辑器内置图标的预览和导出工具，支持图标搜索和批量导出，方便 UI 开发和编辑器扩展。
 
 ## 功能特性
 

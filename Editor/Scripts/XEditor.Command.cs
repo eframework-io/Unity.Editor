@@ -18,7 +18,7 @@ namespace EFramework.Unity.Editor
     public partial class XEditor
     {
         /// <summary>
-        /// XEditor.Command 是一个用于在编辑器中执行命令行操作的工具模块，提供了命令查找和执行功能，支持跨平台操作。
+        /// XEditor.Command 提供了命令查找和执行功能，支持跨平台操作，用于简化在 Unity 编辑器环境的命令行操作。
         /// </summary>
         /// <remarks>
         /// <code>

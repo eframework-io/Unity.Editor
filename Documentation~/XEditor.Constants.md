@@ -5,7 +5,7 @@
 [![DeepWiki](https://img.shields.io/badge/DeepWiki-Explore-blue)](https://deepwiki.com/eframework-io/Unity.Editor)
 [![Discord](https://img.shields.io/discord/1422114598835851286?label=Discord&logo=discord)](https://discord.gg/XMPx2wXSz3)
 
-XEditor.Constants 提供了编辑器常量配置的管理功能，支持通过特性标记的方式自定义常量值。
+提供了编辑器常量配置的管理功能，支持通过特性标记的方式自定义常量值。
 
 ## 功能特性
 

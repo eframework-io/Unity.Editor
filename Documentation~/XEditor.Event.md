@@ -5,7 +5,7 @@
 [![DeepWiki](https://img.shields.io/badge/DeepWiki-Explore-blue)](https://deepwiki.com/eframework-io/Unity.Editor)
 [![Discord](https://img.shields.io/discord/1422114598835851286?label=Discord&logo=discord)](https://discord.gg/XMPx2wXSz3)
 
-XEditor.Event 提供了基于接口的编辑器事件系统，支持自定义事件回调和通知，内置了一些常用的事件，如编辑器初始化、更新和退出等。
+提供了基于接口的编辑器事件系统，支持自定义事件回调和通知，内置了一些常用的事件，如编辑器初始化、更新和退出等。
 
 ## 功能特性
 

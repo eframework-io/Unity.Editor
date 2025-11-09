@@ -45,6 +45,6 @@
     "Third Party Notices.md.meta"
   ],
   "dependencies": {
-    "io.eframework.unity.utility": "1.1.0"
+    "io.eframework.unity.utility": "1.1.1"
   }
 }

@@ -1,11 +1,11 @@
-# Unity.Editor
+# EFramework Editor for Unity
 
 [![NPM](https://img.shields.io/npm/v/io.eframework.unity.editor?label=NPM&logo=npm)](https://www.npmjs.com/package/io.eframework.unity.editor)
 [![UPM](https://img.shields.io/npm/v/io.eframework.unity.editor?label=UPM&logo=unity&registry_uri=https://package.openupm.com)](https://openupm.com/packages/io.eframework.unity.editor)
 [![DeepWiki](https://img.shields.io/badge/DeepWiki-Explore-blue)](https://deepwiki.com/eframework-io/Unity.Editor)
 [![Discord](https://img.shields.io/discord/1422114598835851286?label=Discord&logo=discord)](https://discord.gg/XMPx2wXSz3)
 
-Unity.Editor 是一个基于 Unity 的编辑器扩展工具库，提供了任务系统、配置管理、事件系统、快速构建等功能，用于提高开发效率。
+基于 Unity 编辑器的扩展工具库，提供了任务系统、配置管理、事件系统、快速构建等功能，用于提高开发效率。
 
 ## 功能特性
 

@@ -361,7 +361,7 @@ public class TestXEditorTasksRun
                         Assert.That(XFile.HasFile(batchReport), Is.True);
 
                         var reports = XObject.FromJson<Dictionary<string, XEditor.Tasks.Report>>(XFile.OpenText(batchReport));
-                        Assert.IsTrue(reports.ContainsKey(task1.ID), "任务1的结果信息应当存在");
+                        Assert.That(reports.ContainsKey(task1.ID), "任务1的结果信息应当存在");
                     }
                     break;
                 case "Mixed":
@@ -388,8 +388,8 @@ public class TestXEditorTasksRun
 
                         Assert.That(XFile.HasFile(batchReport), Is.True);
                         var reports = XObject.FromJson<Dictionary<string, XEditor.Tasks.Report>>(XFile.OpenText(batchReport));
-                        Assert.IsTrue(reports.ContainsKey(task1.ID), "任务1的结果信息应当存在");
-                        Assert.IsTrue(reports.ContainsKey(task2.ID), "任务2的结果信息应当存在");
+                        Assert.That(reports.ContainsKey(task1.ID), "任务1的结果信息应当存在");
+                        Assert.That(reports.ContainsKey(task2.ID), "任务2的结果信息应当存在");
                     }
                     break;
                 case "Sync":
@@ -415,8 +415,8 @@ public class TestXEditorTasksRun
 
                         Assert.That(XFile.HasFile(batchReport), Is.True);
                         var reports = XObject.FromJson<Dictionary<string, XEditor.Tasks.Report>>(XFile.OpenText(batchReport));
-                        Assert.IsTrue(reports.ContainsKey(task1.ID), "任务1的结果信息应当存在");
-                        Assert.IsTrue(reports.ContainsKey(task2.ID), "任务2的结果信息应当存在");
+                        Assert.That(reports.ContainsKey(task1.ID), "任务1的结果信息应当存在");
+                        Assert.That(reports.ContainsKey(task2.ID), "任务2的结果信息应当存在");
                     }
                     break;
                 case "Async":
@@ -445,8 +445,8 @@ public class TestXEditorTasksRun
 
                         Assert.That(XFile.HasFile(batchReport), Is.True);
                         var reports = XObject.FromJson<Dictionary<string, XEditor.Tasks.Report>>(XFile.OpenText(batchReport));
-                        Assert.IsTrue(reports.ContainsKey(task1.ID), "任务1的结果信息应当存在");
-                        Assert.IsTrue(reports.ContainsKey(task2.ID), "任务2的结果信息应当存在");
+                        Assert.That(reports.ContainsKey(task1.ID), "任务1的结果信息应当存在");
+                        Assert.That(reports.ContainsKey(task2.ID), "任务2的结果信息应当存在");
                     }
                     break;
                 case "Nonexist":

@@ -15,9 +15,6 @@ using EFramework.Unity.Utility;
 /// </summary>
 public class TestXEditorBuilder
 {
-    /// <summary>
-    /// 测试用构建类（自定义参数）。
-    /// </summary>
     public class MyBuilder : XEditor.Builder
     {
         public override string Output => XFile.PathJoin(Root, "CustomOutput");
@@ -27,9 +24,6 @@ public class TestXEditorBuilder
         public override string[] Scenes => new string[] { "Assets/Scenes/Test.unity" };
     }
 
-    /// <summary>
-    /// 测试用构建类（自定义场景）。
-    /// </summary>
     [XEditor.Tasks.Worker(name: "MyBuilder2", group: "Builder Test")]
     public class MyBuilder2 : XEditor.Builder
     {
@@ -139,10 +133,7 @@ public class TestXEditorBuilder
 #endif
 #endif
         }
-        catch (Exception e)
-        {
-            Assert.Fail(e.Message);
-        }
+        catch { throw; }
         finally
         {
             if (type == typeof(MyBuilder))

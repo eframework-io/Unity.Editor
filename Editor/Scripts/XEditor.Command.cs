@@ -156,6 +156,9 @@ namespace EFramework.Unity.Editor
                 var path = Environment.GetEnvironmentVariable("PATH") +
                     Path.PathSeparator + "/usr/local/bin" +
                     Path.PathSeparator + "/usr/local/share/dotnet";
+#if UNITY_EDITOR_OSX
+                path += Path.PathSeparator + "/opt/homebrew/bin";
+#endif
 #endif
                 path += Path.PathSeparator + XFile.PathJoin(XEnv.ProjectPath, "node_modules", ".bin");
                 var paths = path.Split(Path.PathSeparator);
@@ -199,14 +202,22 @@ namespace EFramework.Unity.Editor
             /// <param name="cwd">执行命令的工作目录，默认为项目路径。</param>
             /// <param name="print">是否打印日志。</param>
             /// <param name="progress">是否显示进度条。</param>
-            /// <param name="args">命令行参数列表。</param>
+            /// <param name="args">命令参数列表。</param>
             /// <returns>包含命令执行结果的异步任务。</returns>
-            /// <exception cref="ArgumentNullException">当 bin 参数为空时抛出。</exception>
-            /// <remarks>
-            /// - 所有输出均使用 UTF-8 编码。
-            /// - 支持通过进度条取消执行（非批处理模式）。
-            /// </remarks>
-            public static Task<Result> Run(string bin, string cwd = "", bool print = true, bool progress = true, params string[] args)
+            /// </summary>
+            public static Task<Result> Run(string bin, string cwd = "", bool print = true, bool progress = true, params string[] args) { return Run(bin, cwd, print, progress, null, args); }
+
+            /// <summary>
+            /// Run 异步执行指定的命令。支持实时输出、进度显示和取消操作。
+            /// </summary>
+            /// <param name="bin">命令的完整路径。</param>
+            /// <param name="cwd">执行命令的工作目录，默认为项目路径。</param>
+            /// <param name="print">是否打印日志。</param>
+            /// <param name="progress">是否显示进度条。</param>
+            /// <param name="envs">环境变量字典。</param>
+            /// <param name="args">命令参数列表。</param>
+            /// <returns>包含命令执行结果的异步任务。</returns>
+            public static Task<Result> Run(string bin, string cwd, bool print, bool progress, Dictionary<string, string> envs, params string[] args)
             {
                 if (string.IsNullOrEmpty(bin)) throw new ArgumentNullException("bin");
 
@@ -228,9 +239,13 @@ namespace EFramework.Unity.Editor
                 var path = Environment.GetEnvironmentVariable("PATH");
 #if !UNITY_EDITOR_WIN
                 path += Path.PathSeparator + "/usr/local/bin" + Path.PathSeparator + "/usr/local/share/dotnet";
+#if UNITY_EDITOR_OSX
+                path += Path.PathSeparator + "/opt/homebrew/bin";
+#endif
 #endif
                 path += Path.PathSeparator + XFile.PathJoin(XEnv.ProjectPath, "node_modules", ".bin");
                 info.Environment["PATH"] = path;
+                if (envs != null) foreach (var kvp in envs) info.Environment[kvp.Key] = kvp.Value;
 
                 if (print) XLog.Debug("XEditor.Command.Run: start {0} with arguments: {1}", name, info.Arguments);
 

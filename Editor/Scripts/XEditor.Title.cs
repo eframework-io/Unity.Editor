@@ -5,6 +5,7 @@
 using System;
 using System.IO;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 using UnityEditor;
 using EFramework.Unity.Utility;
 
@@ -37,6 +38,16 @@ namespace EFramework.Unity.Editor
         /// </remarks>
         public class Title : Event.Internal.OnEditorLoad, Event.Internal.OnPreferencesApply
         {
+            /// <summary>
+            /// Git 环境变量。
+            /// </summary>
+            internal static readonly Dictionary<string, string> gitEnvs = new()
+            {
+                ["GIT_TERMINAL_PROMPT"] = "0",
+                ["GCM_INTERACTIVE"] = "never",
+                ["GIT_ASKPASS"] = "echo",
+            };
+
             /// <summary>
             /// 标识是否正在刷新 Git 信息。
             /// </summary>
@@ -210,28 +221,28 @@ namespace EFramework.Unity.Editor
                     gitPullCount = 0;
                     gitDirtyCount = 0;
 
-                    var branchResult = await Command.Run(bin: "git", print: false, args: new string[] { "branch", "--show-current" });
+                    var branchResult = await Command.Run(bin: "git", cwd: XEnv.ProjectPath, print: false, progress: false, envs: gitEnvs, args: new string[] { "branch", "--show-current" });
                     if (branchResult.Code == 0 && !string.IsNullOrEmpty(branchResult.Data))
                     {
                         gitBranch = branchResult.Data.Trim();
 
-                        var statusResult = await Command.Run(bin: "git", print: false, args: new string[] { "status", "--porcelain" });
+                        var statusResult = await Command.Run(bin: "git", cwd: XEnv.ProjectPath, print: false, progress: false, envs: gitEnvs, args: new string[] { "status", "--porcelain" });
                         if (statusResult.Code == 0)
                         {
                             var changes = statusResult.Data.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
                             gitDirtyCount = changes.Length;
                         }
 
-                        var fetchResult = await Command.Run(bin: "git", print: false, args: new string[] { "fetch", "origin" });
+                        var fetchResult = await Command.Run(bin: "git", cwd: XEnv.ProjectPath, print: false, progress: false, envs: gitEnvs, args: new string[] { "fetch", "origin" });
                         if (fetchResult.Code == 0)
                         {
-                            var pushResult = await Command.Run(bin: "git", print: false, args: new string[] { "rev-list", "@{push}..HEAD", "--count" });
+                            var pushResult = await Command.Run(bin: "git", cwd: XEnv.ProjectPath, print: false, progress: false, envs: gitEnvs, args: new string[] { "rev-list", "@{push}..HEAD", "--count" });
                             if (pushResult.Code == 0 && !string.IsNullOrEmpty(pushResult.Data))
                             {
                                 int.TryParse(pushResult.Data.Trim(), out gitPushCount);
                             }
 
-                            var pullResult = await Command.Run(bin: "git", print: false, args: new string[] { "rev-list", "HEAD..@{upstream}", "--count" });
+                            var pullResult = await Command.Run(bin: "git", cwd: XEnv.ProjectPath, print: false, progress: false, envs: gitEnvs, args: new string[] { "rev-list", "HEAD..@{upstream}", "--count" });
                             if (pullResult.Code == 0 && !string.IsNullOrEmpty(pullResult.Data))
                             {
                                 int.TryParse(pullResult.Data.Trim(), out gitPullCount);
